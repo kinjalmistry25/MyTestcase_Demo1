@@ -17,15 +17,13 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://classic.listingprowp.com/')
 
-WebUI.setText(findTestObject('Object Repository/search_element/search_keyword/input_What_select'), 'restaurant')
+WebUI.setText(findTestObject('Object Repository/citysearch/citysearch/input_Where_cities'), 'new york')
 
-WebUI.delay(15)
+WebUI.click(findTestObject('Object Repository/citysearch/citysearch/input_Where_lp-search-btn'))
 
-WebUI.click(findTestObject('search_element/search_keyword/li_Restaurant'))
+WebUI.delay(6)
 
-WebUI.click(findTestObject('Object Repository/search_element/search_keyword/input_Where_lp-search-btn'))
-
-WebUI.click(findTestObject('Object Repository/search_element/search_result/div_Save'))
+WebUI.click(findTestObject('Object Repository/citysearch/citysearch2/span_New York'))
 
 WebUI.closeBrowser()
 
