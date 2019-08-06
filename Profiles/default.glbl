@@ -9,4 +9,9 @@
       <initValue>'https://restaurantpro.listingprowp.com/'</initValue>
       <name>ADD_URL</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://classic.listingprowp.com/'</initValue>
+      <name>APP_URL</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

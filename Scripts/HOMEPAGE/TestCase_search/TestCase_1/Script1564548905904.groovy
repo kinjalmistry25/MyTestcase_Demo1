@@ -17,31 +17,15 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.ADD_URL)
 
-WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), 'hotels')
+WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), 'hotel')
 
 WebUI.delay(5)
 
-if (WebUI.getText(findTestObject('search_element/search_keyword/input_What_select')) == 'hotels') {
-    WebUI.comment('blank result')
+def data = WebUI.getAttribute(findTestObject('search_element/search_keyword/input_What_select'), 'value')
+
+if (data == 'hotel') {
+    WebUI.comment(data)
 } else {
-    WebUI.comment('result is not blank')
-}
-
-not_run: if (WebUI.verifyElementVisible(findTestObject('search_city_keyword/city_keyword/input_What_select')) == '" "') {
-    WebUI.comment('search city')
-}
-
-not_run: if (WebUI.verifyElementVisible(findTestObject('search_element/search_keyword/input_What_select'))) {
-    not_run: WebUI.comment('test case for search box is visible or not')
-
-    not_run: WebUI.closeBrowser()
-
-    not_run: WebUI.setText(findTestObject(null), 'hotels')
-}
-
-not_run: if (WebUI.getText(findTestObject('search_element/search_keyword/input_What_select')) == '" "') {
-    not_run: WebUI.comment('test case for serch box is blank')
-} else {
-    not_run: WebUI.comment('box is filled.')
+    WebUI.comment('Data is filled')
 }
 
