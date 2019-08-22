@@ -13,19 +13,24 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://google.com')
+WebUI.openBrowser('')
 
-WebUI.navigateToUrl(GlobalVariable.APP_URL)
+for (def index : (0..Cityname.size())) {
+    WebUI.navigateToUrl('https://listify-demos.astoundify.com/rentals/')
 
-WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), 'food')
+    WebUI.setText(findTestObject('Object Repository/Search_listyfy/Listyfy_search/input_Location_search_location'), Cityname[
+        index])
 
-WebUI.delay(5)
+    WebUI.click(findTestObject('Object Repository/Search_listyfy/Listyfy_search/button_Search'))
 
-def data = WebUI.getAttribute(findTestObject('search_element/search_keyword/input_What_select'), 'value')
+    WebUI.delay(2)
 
-if (data == 'food') {
-    WebUI.comment(data)
-} else {
-    WebUI.comment('Data is filled')
+    if (WebUI.verifyElementVisible(findTestObject('Search_listyfy/Listyfy_search/input_Location_search_location'))) {
+        WebUI.comment('passed')
+    } else {
+        WebUI.comment('failed')
+
+        WebUI.delay(3)
+    }
 }
 

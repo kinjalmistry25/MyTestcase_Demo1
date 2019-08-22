@@ -13,19 +13,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://google.com')
+WebUI.openBrowser('')
 
-WebUI.navigateToUrl(GlobalVariable.APP_URL)
+for (def index : list) {
+    WebUI.navigateToUrl(GlobalVariable.ADD_URL)
 
-WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), 'food')
+    WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), index)
 
-WebUI.delay(5)
+    WebUI.delay(5)
 
-def data = WebUI.getAttribute(findTestObject('search_element/search_keyword/input_What_select'), 'value')
+    data = WebUI.getAttribute(findTestObject('search_element/After_Search'), 'value')
 
-if (data == 'food') {
-    WebUI.comment(data)
-} else {
-    WebUI.comment('Data is filled')
+    if (data == index) {
+        WebUI.comment('passed')
+    } else {
+        WebUI.comment('failed')
+    }
 }
 

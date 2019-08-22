@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TestCase_2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9812e8fb-e9e4-489a-8fcc-595e4ba3ed3c</testCaseGuid>
+   <variable>
+      <defaultValue>['car', 'hotel', 'food']</defaultValue>
+      <description></description>
+      <id>c9ffccf6-c4c8-4928-8d17-b289f59b015b</id>
+      <masked>false</masked>
+      <name>list</name>
+   </variable>
+</TestCaseEntity>

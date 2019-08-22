@@ -14,4 +14,9 @@
       <initValue>'https://classic.listingprowp.com/'</initValue>
       <name>APP_URL</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://listify-demos.astoundify.com/rentals/'</initValue>
+      <name>LISTYFY_URL</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

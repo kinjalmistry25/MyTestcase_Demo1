@@ -13,19 +13,27 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://google.com')
+WebUI.openBrowser('')
 
-WebUI.navigateToUrl(GlobalVariable.APP_URL)
+for (def index : (0..(Emails.size()-1))) {
+    WebUI.navigateToUrl('https://listify-demos.astoundify.com/rentals/')
 
-WebUI.setText(findTestObject('search_element/search_keyword/input_What_select'), 'food')
+    WebUI.click(findTestObject('Object Repository/Listyfy_login/Login_listyfy/a_Log In'))
 
-WebUI.delay(5)
+    WebUI.setText(findTestObject('Object Repository/Listyfy_login/Login_listyfy/input__username'), Emails[index])
 
-def data = WebUI.getAttribute(findTestObject('search_element/search_keyword/input_What_select'), 'value')
+    WebUI.setText(findTestObject('Object Repository/Listyfy_login/Login_listyfy/input__password'), Password[index])
 
-if (data == 'food') {
-    WebUI.comment(data)
-} else {
-    WebUI.comment('Data is filled')
+    WebUI.click(findTestObject('Listyfy_login/Login_listyfy/input__login'))
+
+    WebUI.delay(2)
+
+    if (WebUI.verifyElementVisible(findTestObject('SignUpValidate/strong_sumittemplatic'), FailureHandling.CONTINUE_ON_FAILURE)) {
+        WebUI.comment('passed')
+    } else {
+        WebUI.comment('failed')
+
+        WebUI.delay(2)
+    }
 }
 

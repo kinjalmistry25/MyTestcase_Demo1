@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Search_TestCase</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f0360e4e-1dc5-40b2-9517-8adf53d71dfd</testCaseGuid>
+   <variable>
+      <defaultValue>['sun francisco', 'new york', 'toronto']</defaultValue>
+      <description></description>
+      <id>5e6217f8-31f6-42bc-bd30-5c26d40be610</id>
+      <masked>false</masked>
+      <name>Cityname</name>
+   </variable>
+</TestCaseEntity>

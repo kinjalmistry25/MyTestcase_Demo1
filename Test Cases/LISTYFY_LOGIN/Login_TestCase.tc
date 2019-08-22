@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login_TestCase</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7ba6ba32-febb-4c28-8b7b-5824662c61aa</testCaseGuid>
+   <variable>
+      <defaultValue>['', 'kinjal2512', 'kinjalmistry251296@gmail.com']</defaultValue>
+      <description></description>
+      <id>63c415a0-a7b3-4f5c-96cf-bfd9641036ad</id>
+      <masked>false</masked>
+      <name>Emails</name>
+   </variable>
+   <variable>
+      <defaultValue>['', 'kinjal251296', 'Kinjal251296']</defaultValue>
+      <description></description>
+      <id>e56e317b-efed-43d0-95cc-7974301f6522</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+</TestCaseEntity>
