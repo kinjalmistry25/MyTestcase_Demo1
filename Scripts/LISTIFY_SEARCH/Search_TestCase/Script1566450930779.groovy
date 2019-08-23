@@ -30,7 +30,7 @@ for (def index : (0..Cityname.size())) {
     } else {
         WebUI.comment('failed')
 
-        WebUI.delay(3)
+        WebUI.delay(2)
     }
 }
 
